@@ -7,7 +7,6 @@ import "./App.css"
 
 function App() {
   const [currentIndex, setCurrentIndex] = useState(0)
-  const length = Database.length
 
   function handleSlideLeft() {
     const isLastImage = currentIndex === 0
@@ -56,6 +55,7 @@ function App() {
               src={data.imageLink}
               key={index}
               className={currentIndex === index ? "active" : null}
+              alt={""}
             />
           )
         })}
